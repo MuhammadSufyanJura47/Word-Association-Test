@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Association Test</title>
+  <link rel="shortcut icon" href="issb logo.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Instruction Modal -->
+<div class="modal fade" id="instructionModal" tabindex="-1" aria-labelledby="instructionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="instructionModalLabel">Instructions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to the Word Association Test!</p>
+        <ul class="text-start">
+          <li>Click the <strong>Start</strong> button to begin.</li>
+          <li>This practice test includes 1000+ words</li>
+          <li>You will have limited time to respond to each word.</li>
+          <li>Try to be as spontaneous and quick as possible.</li>
+          <li>Do more and more practice</li>
+          <li>Prepare your ISSB test with full zeel and zest 😊</li>
+        </ul>
+        <p>Good luck!</p>
+        <p id="ccc">Created by Muhammad Sufyan Jura</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container text-center">
+    <div class="word-counter" id="wordCounter"></div>
+    <div class="word-box" id="wordBox">Click Start to Begin Word Association Test</div>
+    <div class="timer" id="timer"></div>
+    <button class="btn btn-start" onclick="startCountdown()" id="startBtn">Start</button>
+    <p id="c1c">Created by Muhammad Sufyan Jura</p>
+  </div>
+
+  <audio id="wordSound">
+    <source src="display.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="script.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var instructionModal = new bootstrap.Modal(document.getElementById('instructionModal'));
+    instructionModal.show();
+  });
+</script>
+
+</body>
+</html>
